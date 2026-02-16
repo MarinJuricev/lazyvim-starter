@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>sf", function()
 end, { desc = "Find Files (Root Dir)" })
 
 -- Yank diagnostic message to clipboard
-vim.keymap.set("n", "<leader>cy", function()
+vim.keymap.set("n", "<leader>ye", function()
   local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
   if #diagnostics > 0 then
     vim.fn.setreg("+", diagnostics[1].message)
